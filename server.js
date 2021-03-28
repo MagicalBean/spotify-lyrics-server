@@ -60,6 +60,7 @@ app.get('/lyrics', async (req, res) => {
   const lyrics =
     (await lyricsFinder(req.query.track, req.query.artist)) ||
     'No Lyrics Found';
+  console.log("Lyrics", lyrics);
   res.json({ lyrics });
 });
 
